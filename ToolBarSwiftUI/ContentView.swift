@@ -9,13 +9,36 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack{
+            Text("Hello, World!")
+                .toolbar{
+                    ToolbarItem(placement: .navigationBarLeading){
+                        Button{
+                            //action
+                        } label: {
+                            Image(systemName: "arrow.left")
+                        }
+                    }
+                    ToolbarItem(placement: .principal){
+                        Button{
+                            //action
+                        } label: {
+                           Text("My Great App")
+                                .font(.headline)
+                        }
+                    }
+                    
+                    
+                    
+                    ToolbarItem(placement: .navigationBarTrailing){
+                        Button{
+                            //action
+                        } label: {
+                            Image(systemName: "star")
+                        }
+                    }
+                }
         }
-        .padding()
     }
 }
 
